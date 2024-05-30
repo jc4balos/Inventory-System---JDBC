@@ -5,15 +5,15 @@ public class Item {
     public Integer itemId;
     public String itemName;
     public Integer itemQty;
-    public String itemUnit;
+    public Integer unitId;
     public String itemDescription;
 
-    Item(Integer itemIdParam, String itemNameParam, Integer itemQtyParam, String itemUnitParam,
+    public Item(Integer itemIdParam, String itemNameParam, Integer itemQtyParam, Integer unitIdParam,
             String itemDescriptionParam) {
         this.itemId = itemIdParam;
         this.itemName = itemNameParam;
         this.itemQty = itemQtyParam;
-        this.itemUnit = itemUnitParam;
+        this.unitId = unitIdParam;
         this.itemDescription = itemDescriptionParam;
 
     }
