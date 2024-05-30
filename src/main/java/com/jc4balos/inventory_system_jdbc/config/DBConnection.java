@@ -9,19 +9,15 @@ public class DBConnection {
     private static String username = "root";
     private static String password = "";
 
-    public static Connection connect() {
-        try {
-            Connection con = DriverManager.getConnection(url, username, password);
-            if (con != null) {
-                System.out.println("Database connection esatablished!");
-            } else {
-                System.out.println("Database connection failed!");
-            }
-            return con;
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return null;
+    public static Connection connect() throws SQLException {
+
+        Connection con = DriverManager.getConnection(url, username, password);
+        if (con != null) {
+            System.out.println("Database connection esatablished!");
+        } else {
+            System.out.println("Database connection failed!");
         }
+        return con;
 
     }
 }
