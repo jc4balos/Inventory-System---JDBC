@@ -6,7 +6,7 @@ public class InventorySystemApplication {
     public static void main(String[] args) {
         try {
 
-            ItemService.modifyDescription(2, "dwadawdawdwa");
+            ItemService.addQty(2, 10);
 
         } catch (Exception e) {
             System.out.println(e);
