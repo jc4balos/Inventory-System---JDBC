@@ -63,4 +63,14 @@ public class ItemService {
         System.out.println("Item amount updated success");
         con.close();
     }
+
+    public static void decreaseQty(int itemId, int amount) throws SQLException {
+        Connection con = DBConnection.connect();
+        PreparedStatement setItemQty = con.prepareStatement("UPDATE items SET item_qty= item_qty - ? WHERE item_id=?");
+        setItemQty.setInt(1, amount);
+        setItemQty.setInt(2, itemId);
+        setItemQty.executeUpdate();
+        System.out.println("Item amount updated success");
+        con.close();
+    }
 }
